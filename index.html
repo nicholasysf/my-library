@@ -7,19 +7,36 @@
     <title>Nicholas' Library</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
-</head>
+</head> 
+<!-- BODY CONTAINER HERE -->
 <body class="container">
+    <!-- HEADER -->
     <header>
         <h1 class="header-item">Library</h1>
-        <button class="header-item">Login</button>
+        <button class="header-item login-btn">Login</button>
     </header>
-
+    <!-- MAIN CONTENT HERE -->
     <div class="main">
-        <button class="add">+ Add book</button>
+        <button class="add-btn">+ Add book</button>
     </div>
+    <!-- FOOTER HERE -->
     <footer>
         <p>Copyright © Nicholas Yee</p>
-
     </footer>
+<!-- MODAL HERE -->
+    <div class="modal active" id="modal">
+        <form class="pop-up">
+            <h3>Add New book</h3>
+            <input type="text" id="title" placeholder="Title" maxlength="50">
+            <input type="text" id="author" placeholder="Author" maxlength="50">
+            <input type="text" id="pages" placeholder="Pages" maxlength="50">
+            <div class="read-check">
+                <label for="isRead">Have you read it?</label>
+                <input class="checkbox" type="checkbox" name="isRead" id="isRead">
+            </div>
+            <button class="submit-btn" id="submit-btn">SUBMIT</button>
+        </form>
+    </div>
+    <div id="overlay" class="active"></div>
 </body>
 </html>

@@ -20,8 +20,9 @@ header{
     height: 50%;
 }
 
-button{
-    font-family:'Silkscreen', cursive;    border: 5px solid rgba(93, 158, 241, 0.6);
+.add-btn, .login-btn{
+    font-family:'Silkscreen', cursive;   
+    border: 5px solid rgba(93, 158, 241, 0.6);
     border-radius: 12px;
     font-size: 24px;
     -webkit-transition: all .15s ease-in-out;
@@ -48,7 +49,70 @@ footer{
     min-height: 80vh;
 }
 
+.modal{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    border: 2px solid rgb(127, 126, 126);
+    border-radius: 20px;
+    z-index: 10;
+    background-color: rgb(246, 248, 248);
+    width: 300px;
+    padding: 10px;
+}
 
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.pop-up > input{
+    border: 2px solid rgb(174, 171, 171);
+    border-radius: 10px;
+    margin-bottom:40px;
+    padding: 5px;
+    height: 30px;
+    width:90%;
+    text-align: center;
+    font-family:'Silkscreen', cursive;
+}
 
+.read-check{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.submit-btn{
+    margin-top: 20px;
+    height: 40px;
+    border: 2px solid rgb(174, 171, 171);
+    border-radius: 10px;
+    background-color: lightgreen;
+    width:40%;
+    font-family:'Silkscreen', cursive;
+}
 
+.checkbox{
+    width: 20px;
+    height: 20px;
+    accent-color: white;
+}
+
+#overlay{
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background-color: (0,0,0,0.5);
+    pointer-events: none;
+}
+
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
