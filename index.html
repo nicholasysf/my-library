@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicholas' Library</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </head> 
 <!-- BODY CONTAINER HERE -->
 <body class="container">
@@ -17,19 +17,22 @@
     </header>
     <!-- MAIN CONTENT HERE -->
     <div class="main">
-        <button class="add-btn">+ Add book</button>
+        <button data-modal-target ="#modal" class="add-btn">+ Add book</button>
     </div>
     <!-- FOOTER HERE -->
     <footer>
         <p>Copyright © Nicholas Yee</p>
     </footer>
 <!-- MODAL HERE -->
-    <div class="modal active" id="modal">
+    <div class="modal" id="modal">
         <form class="pop-up">
-            <h3>Add New book</h3>
-            <input type="text" id="title" placeholder="Title" maxlength="50">
-            <input type="text" id="author" placeholder="Author" maxlength="50">
-            <input type="text" id="pages" placeholder="Pages" maxlength="50">
+            <div class="pop-head">
+                <h3>Add New book</h3>
+                <button data-close-button class="close-btn">&times;</button>
+            </div>
+            <input type="text" id="title" placeholder="Title" maxlength="40">
+            <input type="text" id="author" placeholder="Author" maxlength="40">
+            <input type="text" id="pages" placeholder="Pages" maxlength="40">
             <div class="read-check">
                 <label for="isRead">Have you read it?</label>
                 <input class="checkbox" type="checkbox" name="isRead" id="isRead">
@@ -37,6 +40,6 @@
             <button class="submit-btn" id="submit-btn">SUBMIT</button>
         </form>
     </div>
-    <div id="overlay" class="active"></div>
+    <div id="overlay" ></div>
 </body>
 </html>

@@ -49,23 +49,28 @@ footer{
     min-height: 80vh;
 }
 
-.modal{
-    position: fixed;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%) scale(0);
-    border: 2px solid rgb(127, 126, 126);
-    border-radius: 20px;
-    z-index: 10;
-    background-color: rgb(246, 248, 248);
-    width: 300px;
-    padding: 10px;
-}
+
 
 form{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.pop-head{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: 30px;
+}
+
+.close-btn{
+    display: flex;
+    align-items: center;
+    height: 20px;
+    border: 2px solid rgb(174, 171, 171);
+    border-radius: 5px;
+    
 }
 
 .pop-up > input{
@@ -100,6 +105,23 @@ form{
     accent-color: white;
 }
 
+.modal{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 2px solid rgb(127, 126, 126);
+    border-radius: 20px;
+    z-index: 10;
+    background-color: rgb(246, 248, 248);
+    width: 300px;
+    max-width: 60%;
+    padding: 10px;
+}
+.modal.active{
+    transform: translate(-50%,-50%) scale(1);
+}
 #overlay{
     position: fixed;
     opacity: 0;
@@ -108,11 +130,11 @@ form{
     left: 0;
     right: 0;
     bottom:0;
-    background-color: (0,0,0,0.5);
+    background-color: rgba(0,0,0,0.5);
     pointer-events: none;
 }
 
 #overlay.active{
     opacity: 1;
-    pointer-events: all;
+    pointer-events:all;
 }
