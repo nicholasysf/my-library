@@ -37,3 +37,31 @@ overlay.addEventListener('click',()=>{
         closeModal(modal);
     })
 })
+
+//1.Create a div element for the container
+let booksDiv = document.createElement('div');
+booksDiv.classList.add('book-list');
+//2.Append this bookDiv as the child to our main
+let mainContainer = document.querySelector('.main')
+mainContainer.appendChild(booksDiv);
+
+// 3. Add event listener on submit button
+document.getElementById('submit-btn').addEventListener('click',addBooks);
+
+
+//4. Create function for addBooks which acts as a callback fn
+function addBooks(){
+    let title = document.getElementById('title').value;
+    let author = document.getElementById('author').value;
+    let pages = document.getElementById('pages').value;
+    
+    let bookDetails = `<div class="book-style">
+        <span>Title: ${title}</span>
+        <span>Author: ${author}</span>
+        <span>Pages: ${pages}</span>
+    </div>`;
+
+//5. add the content to the bookDiv
+    booksDiv.insertAdjacentHTML('beforeend',bookDetails);
+    closeModal(modal);
+}

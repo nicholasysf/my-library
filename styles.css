@@ -49,7 +49,9 @@ footer{
     min-height: 80vh;
 }
 
-
+.add-book-btn{
+    margin-bottom: 50px;
+}
 
 form{
     display: flex;
@@ -137,4 +139,23 @@ form{
 #overlay.active{
     opacity: 1;
     pointer-events:all;
+}
+
+
+.book-list{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.book-style{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px;
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    border: 2px solid rgb(94, 94, 94);
+    border-radius: 20px;
+    width: 280px;
 }
